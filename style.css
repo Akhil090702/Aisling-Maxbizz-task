@@ -69,18 +69,19 @@
     height: 20px;
   }
   .content {
-    position: absolute;
-    width: 100%;
+    /* position: absolute; */
+    min-width: 90%;
   }
   .content .top {
     display: none;
   }
   .content .middle h1 {
-    font-size: 21px;
+    font-size: 30px;
     width: 100%;
   }
   .content .down p {
-    width: 450px;
+    width: 100%;
+    font-size: 13px;
   }
 
   .bottom .leftbtn {
@@ -108,7 +109,6 @@
 
   .aboutpage .aboutleft {
     position: relative;
-    margin-top: 55vh;
     width: 100%;
   }
 
@@ -119,15 +119,15 @@
   }
 
   .aboutright .aboutright-top h6 {
-    width: 35%;
+    width: 41%;
     text-align: center;
   }
 
   .aboutright .aboutright-middle h1 {
-    width: 450px;
+    width: 100%;
   }
   .aboutright .aboutright-middle p {
-    width: 450px;
+    width: 100%;
   }
 
   .boxes .box-left img {
@@ -137,7 +137,7 @@
   }
 
   .top-principles p {
-    min-width: 24%;
+    min-width: 30%;
   }
   .industries-boxes .row {
     padding: 2vh 6vw;
@@ -200,15 +200,15 @@ nav ul li {
 .imagediv {
   background-image: url(./images/smiley-man-work-holding-laptop-posing_23-2148908835.avif);
   height: 100vh;
-  width: 100%;
+  max-width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
-.imagediv::before {
+/* .imagediv::before {
   opacity: 0.5;
   position: absolute;
-}
+} */
 
 .content {
   position: absolute;
@@ -269,8 +269,8 @@ nav ul li {
 }
 .boxes {
   margin-top: -60px;
-  position: absolute;
   display: flex;
+  gap: 2vw;
 }
 
 .searchimage {
@@ -283,12 +283,10 @@ nav ul li {
 .box3 {
   display: flex;
   align-items: center;
-  gap: 2vw;
   background-color: white;
   padding: 2vh 2vw;
-  width: 400px;
+  width: 33%;
   height: 120px;
-  margin-right: 3vw;
   border-radius: 1vh;
   box-shadow: 2px 2px 10px rgba(128, 128, 128, 0.395);
 }
@@ -305,16 +303,24 @@ nav ul li {
   background-image: url(./images/woman-hands-typing-laptop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 340px;
+  width: 50%;
 }
 
+@media (max-width: 800px) {
+  .image1 {
+    width: 80%;
+  }
+  .image2 {
+    min-width: 80%;
+  }
+}
 .image2 {
   top: 20%;
   left: 15%;
   background-image: url(./images/young-person-during-intership.jpg);
   position: absolute;
-  width: 350px;
   background-repeat: no-repeat;
+  width: 25%;
   background-size: cover;
   height: 400px;
 }
@@ -503,7 +509,7 @@ nav ul li {
     height: 320px !important;
   }
   .top-benefitbtn p {
-    min-width: 25%;
+    min-width: 30%;
   }
   .carousel-content {
     margin-top: 5vh;
@@ -755,21 +761,8 @@ nav ul li {
     align-items: center;
   }
 
-  .left-portimg {
-    min-width: 100%;
-    background-size: contain;
-  }
-  .right-portimg {
-    min-width: 100%;
-  }
-  .lowerleft,
-  .lowerright {
-    height: 100%;
-    min-width: 100%;
-    background-size: contain;
-  }
   .counter-bar {
-    margin-top: 125vh;
+    width: 100%;
   }
   .port-top {
     display: inline-block !important;
@@ -781,12 +774,15 @@ nav ul li {
   .blogbtn button {
     padding: 1.4vh 3vw !important;
   }
+  .left-portimg,.right-portimg, .upperrightimg, .lowerrightimg, .lowerleft, .lowerright{
+    min-width: 100%;
+    margin-top: 2vh;
+  }
 }
 
 .portfolio {
   padding-top: 15vh;
-  padding-bottom: 15vh;
-  position: relative;
+  padding-bottom: 10vh;
 }
 
 .port-top {
@@ -822,53 +818,68 @@ nav ul li {
   display: flex;
   flex-flow: wrap;
   width: 100%;
-  height: 600px;
-  gap: 25px;
 }
 
 .left-portimg {
-  width: 49%;
-  height: 100%;
-  background-image: url(./images/2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  width: 50%;
+  min-height: 100%;
 }
 
 .right-portimg {
-  width: 49%;
+  width: 50%;
   height: 100%;
 }
 
-.upperrightimg {
-  height: 48%;
-  background-image: url(./images/1.jpg);
-  background-size: cover;
-  margin-bottom: 25px;
-  background-repeat: no-repeat;
-}
-.lowerrightimg {
-  display: flex;
-  flex-flow: wrap;
-  gap: 25px;
+.left-portimg img {
   width: 100%;
-  height: 48%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 100%;
 }
-.lowerleft {
-  width: 48%;
-  background-image: url(./images/3.jpg);
+
+.right-portimg {
+  width: 50%;
+  height: 100%;
+}
+
+.upperrightimg img {
+  height: 50%;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.lowerright {
-  width: 48%;
-  background-image: url(./images/important-phone-call.jpg);
+.lowerrightimg {
+  display: flex;
+  flex-flow: wrap;
+  width: 100%;
+  height: 50%;
+}
+
+.lowerleft{
+  width: 50%;
+}
+
+.lowerleft img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.lowerright{
+  width: 50%;
+}
+
+.lowerright img {
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .counter-bar {
   background-color: #fe8423;
+  width: 100%;
   height: 250px;
 }
 .counter {
@@ -882,7 +893,7 @@ nav ul li {
   display: flex;
   align-items: center;
   color: white;
-  gap: 20px;
+  gap: 2vw;
 }
 .counter-box h2 {
   font-weight: 700;
@@ -970,6 +981,7 @@ nav ul li {
 a {
   cursor: pointer;
 }
+
 button {
   cursor: pointer;
 }
@@ -1137,5 +1149,8 @@ button {
   }
   .subsicon {
     width: 10%;
+  }
+  .counter-box {
+    width: 50%;
   }
 }
